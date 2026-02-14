@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anavr.in/sitemap.xml
