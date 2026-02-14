@@ -204,10 +204,28 @@ function animateCounter(element) {
     const timer = setInterval(() => {
         current += step;
         if (current >= target) {
-            element.textContent = target.toLocaleString() + '+';
+            // Format based on the target value
+            let formattedValue;
+            if (target >= 1000000) {
+                // Format as $X.XM+ for millions
+                formattedValue = '$' + (target / 1000000).toFixed(1) + 'M+';
+            } else if (target >= 1000) {
+                // Format as 1,200+ for thousands
+                formattedValue = target.toLocaleString() + '+';
+            } else if (target <= 100 && element.parentElement.textContent.includes('Satisfaction')) {
+                // Format as XX% for satisfaction rate
+                formattedValue = target + '%';
+            } else {
+                formattedValue = target.toLocaleString() + '+';
+            }
+            element.textContent = formattedValue;
             clearInterval(timer);
         } else {
-            element.textContent = Math.floor(current).toLocaleString();
+            if (target >= 1000000) {
+                element.textContent = '$' + (current / 1000000).toFixed(1) + 'M';
+            } else {
+                element.textContent = Math.floor(current).toLocaleString();
+            }
         }
     }, 16);
 }
@@ -318,7 +336,7 @@ window.addEventListener('scroll', () => {
 // ========== INITIALIZE EVERYTHING ==========
 document.addEventListener('DOMContentLoaded', () => {
     initParticles();
-    initCountdown();
+    // initCountdown(); // Removed fake countdown timer
     initScrollAnimations();
     initForms();
     initMobileMenu();

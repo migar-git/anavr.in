@@ -488,7 +488,7 @@ body {
 
 .trust-stats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 3rem;
 }
 
@@ -1078,7 +1078,7 @@ body {
     }
     
     .trust-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
     
@@ -1115,4 +1115,95 @@ body {
 .scroll-reveal.revealed {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* ========== TRUST & CREDIBILITY ELEMENTS ========== */
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.trust-badge {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background: rgba(124, 58, 237, 0.2);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    border-radius: 20px;
+    color: var(--white);
+    white-space: nowrap;
+}
+
+.payment-methods {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.payment-icon {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--glass-border);
+    border-radius: 5px;
+    color: var(--gray);
+}
+
+.cohort-notice {
+    background: rgba(124, 58, 237, 0.1);
+    border-left: 3px solid var(--purple);
+    padding: 1rem 1.5rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+}
+
+.cohort-notice p {
+    margin: 0.5rem 0;
+    color: var(--white);
+}
+
+.cohort-notice strong {
+    color: var(--gold);
+}
+
+.preview-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--purple);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.preview-link:hover {
+    color: var(--gold);
+}
+
+.verified-badge {
+    display: inline;
+    font-size: 0.75rem;
+    color: var(--gold);
+    font-weight: 600;
+    margin-left: 0.5rem;
+}
+
+.footer-contact {
+    margin-top: 1rem;
+}
+
+.footer-contact p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.footer-contact a {
+    color: var(--purple);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: var(--gold);
 }
