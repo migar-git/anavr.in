@@ -1,0 +1,10 @@
+{
+  "repo": {"name":"anavr.in","path":"C:/Users/migar/DEV/anavr.in","defaultBranch":"main","detectedStacks":["HTML","CSS","JavaScript"],"detectedBuildCommands":[],"detectedTestCommands":[]},
+  "summary": {"generatedAt":"2026-05-12T13:00:00Z","findingCountsBySeverity":{"critical":0,"high":1,"medium":1,"low":1,"info":1},"topRisks":["broken blog links","stale sitemap"],"recommendedNextSteps":["upload images/og-image.jpg + images/logo.png","choose payment provider","author dropped blog topics"]},
+  "findings": [
+    {"id":"F-0001","title":"blog.html links to 5 non-existent articles","severity":"high","category":"maintainability","status":"fixed","confidence":"high","evidence":"6 cards, only 3 articles on disk","impact":"404s for site visitors","recommendation":"remap 3 to real articles, remove stubs","ownerHint":"site-author"},
+    {"id":"F-0002","title":"sitemap.xml stale and incomplete","severity":"medium","category":"compliance","status":"fixed","confidence":"high","evidence":"5 of 15 URLs, lastmod=2026-02-14","impact":"missed indexable URLs","recommendation":"15 URLs, lastmod=2026-05-12","ownerHint":"site-author"},
+    {"id":"F-0003","title":"Missing image assets","severity":"low","category":"compliance","status":"needs_owner","confidence":"high","evidence":"/images/ dir does not exist","impact":"missing OG preview","recommendation":"owner uploads assets","ownerHint":"site-owner"},
+    {"id":"F-0004","title":"Business functions absent","severity":"info","category":"architecture","status":"needs_owner","confidence":"high","evidence":"no payment/email/analytics","impact":"cannot sell","recommendation":"out of scope for single iteration","ownerHint":"site-owner"}
+  ]
+}
