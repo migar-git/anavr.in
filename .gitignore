@@ -30,3 +30,7 @@ logs/
 *.key
 *.pem
 *.p12
+# Agency client credentials remain local.
+/.env
+/.env.agency
+!/.env.example
